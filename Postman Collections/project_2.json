@@ -7,7 +7,7 @@
 	"item": [
 		{
 			"name": "GET_All_issuse",
-			"_postman_id": "18eed46a-9def-44c4-a0a8-9215b2cf8a16",
+			"id": "18eed46a-9def-44c4-a0a8-9215b2cf8a16",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -15,7 +15,7 @@
 				"auth": {
 					"type": "basic",
 					"basic": {
-						"password": "i8YZKzalf1WBl1WsnUvvDC49",
+						"password": "CaxFH48UBQdr1801iL6Q397C",
 						"username": "hari.radhakrishnan@testleaf.com"
 					}
 				},
@@ -61,7 +61,7 @@
 					}
 				}
 			],
-			"_postman_id": "a2416b0b-deba-4884-a398-ae7e16acd126",
+			"id": "a2416b0b-deba-4884-a398-ae7e16acd126",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -77,10 +77,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {}
-					}
+					"raw": ""
 				},
 				"url": {
 					"raw": "https://api-training.atlassian.net/rest/api/2/search?jql=project=\"JULY\"\n\n",
