@@ -23,7 +23,7 @@
 					}
 				}
 			],
-			"_postman_id": "6bb98315-79ed-4d4f-8112-f68472e809ee",
+			"id": "6bb98315-79ed-4d4f-8112-f68472e809ee",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -60,13 +60,16 @@
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
-							"});"
+							"});\r",
+							"\r",
+							"let res =pm.response.json()\r",
+							"pm.globals.set(\"id\",res[1].id); "
 						],
 						"type": "text/javascript"
 					}
 				}
 			],
-			"_postman_id": "ac40d727-8478-41e1-879b-07943fee5648",
+			"id": "ac40d727-8478-41e1-879b-07943fee5648",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -109,7 +112,7 @@
 					}
 				}
 			],
-			"_postman_id": "6163c477-8c48-4de9-8a30-3642586df8ee",
+			"id": "6163c477-8c48-4de9-8a30-3642586df8ee",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -152,7 +155,7 @@
 					}
 				}
 			],
-			"_postman_id": "dd0d8bde-2ef9-4515-9653-9204cd3a0eb2",
+			"id": "dd0d8bde-2ef9-4515-9653-9204cd3a0eb2",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
