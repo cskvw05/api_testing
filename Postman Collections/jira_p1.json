@@ -90,7 +90,7 @@
 						}
 					}
 				},
-				"url": "https://api-training.atlassian.net/rest/api/2/issue/{{issueid}}"
+				"url": "https://api-training.atlassian.net/rest/api/2/issue/{issueidOrKey}"
 			},
 			"response": []
 		},
