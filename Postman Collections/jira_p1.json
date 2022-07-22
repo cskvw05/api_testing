@@ -58,8 +58,6 @@
 					"script": {
 						"id": "06fba448-e92b-4fe3-9b3c-7ec11520e6a8",
 						"exec": [
-							"let response =pm.response.json();\r",
-							"pm.globals.set(\"id\", response.id);\r",
 							"\r",
 							""
 						],
