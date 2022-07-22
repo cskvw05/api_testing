@@ -14,7 +14,7 @@
 						"id": "77a6c7ef-56e2-4eca-b68a-142dfc2e97a4",
 						"exec": [
 							"let res =pm.response.json()\r",
-							"pm.variables.set(\"issueid\",res.id); \r",
+							"pm.globals.set(\"issueid\",res.id); \r",
 							"pm.test(\"Status code is 201\", function () {\r",
 							"    pm.response.to.have.status(201);\r",
 							"});"
