@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "27180262-1a9b-4471-9d78-c08f8d9809e8",
+		"name": "Jira_Method_Chaining",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create a issue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "77a6c7ef-56e2-4eca-b68a-142dfc2e97a4",
+						"exec": [
+							"let res =pm.response.json()\r",
+							"pm.variables.set(\"issueid\",res.id); \r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "6bb98315-79ed-4d4f-8112-f68472e809ee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "1dEyqYPpkeG1kAz8ASofE34D",
+						"username": "hari.radhakrishnan@testleaf.com"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fields\": {\r\n    \"project\":\r\n                {\r\n                    \"key\": \"JUL\"\r\n                },\r\n    \"summary\": \"create issue in JUL project\",\r\n    \"description\": \"Creating of an issue using project keys and issue type names using the REST API by Vigneshwaran C_S_K\",\r\n    \"issuetype\": {\r\n                    \"name\": \"Bug\"\r\n                }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api-training.atlassian.net/rest/api/2/issue/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get issue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "06fba448-e92b-4fe3-9b3c-7ec11520e6a8",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "ac40d727-8478-41e1-879b-07943fee5648",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "1dEyqYPpkeG1kAz8ASofE34D",
+						"username": "hari.radhakrishnan@testleaf.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fields\": {\r\n\r\n        \"description\": \"Bug creation Using REST API for testing is edited by CSK\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api-training.atlassian.net/rest/api/2/issue/{{issueid}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Update an Issue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5d152052-9f73-4883-8ba6-b5b001fce34f",
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "6163c477-8c48-4de9-8a30-3642586df8ee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "1dEyqYPpkeG1kAz8ASofE34D",
+						"username": "hari.radhakrishnan@testleaf.com"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fields\": {\r\n\r\n        \"description\": \"Bug creation Using REST API for testing by Cskvw\"\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api-training.atlassian.net/rest/api/2/issue/{{issueid}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete the Issue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8f773dbf-0127-403a-bdaa-6b591ad149de",
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "dd0d8bde-2ef9-4515-9653-9204cd3a0eb2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "1dEyqYPpkeG1kAz8ASofE34D",
+						"username": "hari.radhakrishnan@testleaf.com"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "https://api-training.atlassian.net/rest/api/2/issue/{{issueid}}"
+			},
+			"response": []
+		}
+	]
+}
