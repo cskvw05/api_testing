@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "25efb992-62a9-40ce-b2b1-e94dd87a1202",
+		"name": "Jira_Project_1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET_All_issuse",
+			"_postman_id": "18eed46a-9def-44c4-a0a8-9215b2cf8a16",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "i8YZKzalf1WBl1WsnUvvDC49",
+						"username": "hari.radhakrishnan@testleaf.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-training.atlassian.net/rest/api/2/search?jql=project=JUL%26created>-24h",
+					"protocol": "https",
+					"host": [
+						"api-training",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "jql",
+							"value": "project=JUL%26created>-24h"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search for all issues",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4d40171a-8fe4-4126-b2e5-20ecff6f334c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "a2416b0b-deba-4884-a398-ae7e16acd126",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "CaxFH48UBQdr1801iL6Q397C",
+						"username": "hari.radhakrishnan@testleaf.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "https://api-training.atlassian.net/rest/api/2/search?jql=project=\"JULY\"\n\n",
+					"protocol": "https",
+					"host": [
+						"api-training",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "jql",
+							"value": "project=\"JULY\"\n\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": {}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e9cfc223-0e56-4a4e-abdf-5763318213a6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "eccab6ff-2d2e-4cba-8792-38dc858257e2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
