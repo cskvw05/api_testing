@@ -171,5 +171,34 @@
 			},
 			"response": []
 		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": {
+			"password": "CaxFH48UBQdr1801iL6Q397C",
+			"username": "hari.radhakrishnan@testleaf.com"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2c29ae09-31c6-4d00-9ab1-cf9096c95a77",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d139f5bc-c7ec-453b-b101-7f07b9232a3f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
 	]
 }
