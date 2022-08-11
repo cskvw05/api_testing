@@ -137,13 +137,6 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"password": "CaxFH48UBQdr1801iL6Q397C",
-						"username": "hari.radhakrishnan@testleaf.com"
-					}
-				},
 				"method": "DELETE",
 				"header": [],
 				"url": "https://api-training.atlassian.net/rest/api/2/issue/{{issueid}}"
