@@ -28,13 +28,6 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"password": "CaxFH48UBQdr1801iL6Q397C",
-						"username": "hari.radhakrishnan@testleaf.com"
-					}
-				},
 				"method": "POST",
 				"header": [],
 				"body": {
